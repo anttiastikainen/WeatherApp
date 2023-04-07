@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "WeatherApp": {
+      "commandName": "Project",
+      "nativeDebugging": false
+    }
+  }
+}

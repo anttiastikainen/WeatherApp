@@ -1,0 +1,72 @@
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+*.dll
+*.exe
+
+# NuGet Packages Directory
+## .NET Core
+*.csproj.user
+*.nuget.props
+*.paket.*
+*.dotnet*
+project.lock.json
+packages/
+obj/
+bin/
+*.swp
+*.user
+*.vscode
+
+# MSTest test Results
+[Tt]est[Rr]esult*/
+[Bb]in/
+[Oo]bj/
+
+# Visual Studio files
+*.VisualState.xml
+*.dbmdl
+*.jfm
+*.pfx
+*.psess
+*.sln.docstates
+*.suo
+*.user
+*.vsp
+*.vssscc
+*.xss
+
+# Rider files
+.idea/
+*.sln.iml
+
+# Resharper files
+_ReSharper*/
+*.resharper
+*.DotSettings.user
+
+# TeamCity files
+_TeamCity*
+*.tclog
+*.tcprojects
+
+# DotCover files
+*.dotCover
+
+# SQL Server files
+*.mdf
+*.ldf
+*.ndf
+
+# StyleCop
+StyleCopReport.xml
+
+# Tools
+_ReSharper*
+*.ReSharper*
+docfx*
+
+# App config containing API key
+app.config

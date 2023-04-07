@@ -1,0 +1,30 @@
+﻿<Window x:Class="WeatherApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Weather App" Height="350" Width="525">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <TextBlock x:Name="SelectedCityTextBlock" Grid.Row="0" Text="Selected City Name" HorizontalAlignment="Center"/>
+        <TextBlock x:Name="TemperatureTextBlock" Grid.Row="1" Text="Temperature" HorizontalAlignment="Center"/>
+        <TextBlock x:Name="HumidityTextBlock" Grid.Row="2" Text="Humidity" HorizontalAlignment="Center"/>
+        <ScrollViewer Grid.Row="3" VerticalScrollBarVisibility="Auto">
+            <StackPanel>
+                <Button x:Name="HelsinkiButton" Content="Helsinki" Tag="helsinki,fi" Click="Button_Click"/>
+                <Button x:Name="EspooButton" Content="Espoo" Tag="espoo,fi" Click="Button_Click"/>
+                <Button x:Name="TampereButton" Content="Tampere" Tag="tampere,fi" Click="Button_Click"/>
+                <Button x:Name="OuluButton" Content="Oulu" Tag="oulu,fi" Click="Button_Click"/>
+                <Button x:Name="TurkuButton" Content="Turku" Tag="turku,fi" Click="Button_Click"/>
+                <Button x:Name="JyvaskylaButton" Content="Jyvaskyla" Tag="jyväskylä,fi" Click="Button_Click"/>
+                <Button x:Name="LahtiButton" Content="Lahti" Tag="lahti,fi" Click="Button_Click"/>
+                <Button x:Name="KuopioButton" Content="Kuopio" Tag="kuopio,fi" Click="Button_Click"/>
+                <Button x:Name="PoriButton" Content="Pori" Tag="pori,fi" Click="Button_Click"/>
+                <Button x:Name="JoensuuButton" Content="Joensuu" Tag="joensuu,fi" Click="Button_Click"/>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Window>
