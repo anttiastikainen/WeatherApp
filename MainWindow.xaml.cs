@@ -57,6 +57,7 @@ namespace WeatherApp
             FeelsLikeTextBlock.Text = feels;
             string humid = ($"Humidity: {weather.Main.Humidity}%");
             HumidityTextBlock.Text = humid;
+
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -70,7 +71,6 @@ namespace WeatherApp
             var location = (string)button.Tag;
             UpdateView(location);
             button.Background = new SolidColorBrush(Color.FromRgb(0, 191, 255)); // set the background color to red
-
             _selectedButton = button;
         }
     }
