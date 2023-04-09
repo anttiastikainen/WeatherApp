@@ -22,11 +22,13 @@ namespace WeatherApp
     /// </summary>
     public partial class MainWindow : Window
     {
+        // to keep on track which button is pressed
+        private Button _selectedButton;
+
         public MainWindow()
         {
             InitializeComponent();
             UpdateView("Joensuu,fi");
-            Console.WriteLine("Hello world!");
         }
         private async void UpdateView(string location)
         {
@@ -51,15 +53,25 @@ namespace WeatherApp
             SelectedCityTextBlock.Text=weather.Name;
             string temp = ($"Temperature: {weather.Main.Temp}°C");
             TemperatureTextBlock.Text = temp;
+            string feels = ($"Feels like: {weather.Main.FeelsLike}°C");
+            FeelsLikeTextBlock.Text = feels;
             string humid = ($"Humidity: {weather.Main.Humidity}%");
             HumidityTextBlock.Text = humid;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            if (_selectedButton != null)
+            {
+                _selectedButton.Background = new SolidColorBrush(Color.FromRgb(173, 216, 230)); // set the background color to light blue
+            }
+
             var button = (Button)sender;
             var location = (string)button.Tag;
             UpdateView(location);
+            button.Background = new SolidColorBrush(Color.FromRgb(0, 191, 255)); // set the background color to red
+
+            _selectedButton = button;
         }
     }
 }

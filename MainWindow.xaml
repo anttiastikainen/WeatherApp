@@ -7,23 +7,65 @@
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
             <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
         <TextBlock x:Name="SelectedCityTextBlock" Grid.Row="0" Text="Selected City Name" HorizontalAlignment="Center"/>
         <TextBlock x:Name="TemperatureTextBlock" Grid.Row="1" Text="Temperature" HorizontalAlignment="Center"/>
-        <TextBlock x:Name="HumidityTextBlock" Grid.Row="2" Text="Humidity" HorizontalAlignment="Center"/>
-        <ScrollViewer Grid.Row="3" VerticalScrollBarVisibility="Auto">
+        <TextBlock x:Name="FeelsLikeTextBlock" Grid.Row="2" Text="Feels Like" HorizontalAlignment="Center"/>
+        <TextBlock x:Name="HumidityTextBlock" Grid.Row="3" Text="Humidity" HorizontalAlignment="Center"/>
+        <ScrollViewer Grid.Row="4" VerticalScrollBarVisibility="Auto">
             <StackPanel>
-                <Button x:Name="HelsinkiButton" Content="Helsinki" Tag="helsinki,fi" Click="Button_Click"/>
-                <Button x:Name="EspooButton" Content="Espoo" Tag="espoo,fi" Click="Button_Click"/>
-                <Button x:Name="TampereButton" Content="Tampere" Tag="tampere,fi" Click="Button_Click"/>
-                <Button x:Name="OuluButton" Content="Oulu" Tag="oulu,fi" Click="Button_Click"/>
-                <Button x:Name="TurkuButton" Content="Turku" Tag="turku,fi" Click="Button_Click"/>
-                <Button x:Name="JyvaskylaButton" Content="Jyvaskyla" Tag="jyväskylä,fi" Click="Button_Click"/>
-                <Button x:Name="LahtiButton" Content="Lahti" Tag="lahti,fi" Click="Button_Click"/>
-                <Button x:Name="KuopioButton" Content="Kuopio" Tag="kuopio,fi" Click="Button_Click"/>
-                <Button x:Name="PoriButton" Content="Pori" Tag="pori,fi" Click="Button_Click"/>
-                <Button x:Name="JoensuuButton" Content="Joensuu" Tag="joensuu,fi" Click="Button_Click"/>
+                <Button x:Name="HelsinkiButton" Content="Helsinki" Width="300" Tag="helsinki,fi" Click="Button_Click">
+                    <Button.Background>
+                        <SolidColorBrush Color="LightBlue"/>
+                    </Button.Background>
+                </Button>
+                <Button x:Name="EspooButton" Content="Espoo" Width="300" Tag="espoo,fi" Click="Button_Click">
+                    <Button.Background>
+                    <SolidColorBrush Color="LightBlue"/>
+                    </Button.Background>
+                </Button>
+                <Button x:Name="TampereButton" Content="Tampere" Width="300" Tag="tampere,fi" Click="Button_Click">
+                    <Button.Background>
+                        <SolidColorBrush Color="LightBlue"/>
+                    </Button.Background>
+                </Button>
+                <Button x:Name="OuluButton" Content="Oulu" Width="300" Tag="oulu,fi" Click="Button_Click">
+                    <Button.Background>
+                        <SolidColorBrush Color="LightBlue"/>
+                    </Button.Background>
+                </Button>
+                <Button x:Name="TurkuButton" Content="Turku" Width="300" Tag="turku,fi" Click="Button_Click">
+                    <Button.Background>
+                        <SolidColorBrush Color="LightBlue"/>
+                    </Button.Background>
+                </Button>
+                <Button x:Name="JyvaskylaButton" Content="Jyvaskyla" Width="300" Tag="jyväskylä,fi" Click="Button_Click">
+                    <Button.Background>
+                        <SolidColorBrush Color="LightBlue"/>
+                    </Button.Background>
+                </Button>
+                <Button x:Name="LahtiButton" Content="Lahti" Width="300" Tag="lahti,fi" Click="Button_Click">
+                    <Button.Background>
+                        <SolidColorBrush Color="LightBlue"/>
+                    </Button.Background>
+                </Button>
+                <Button x:Name="KuopioButton" Content="Kuopio" Width="300" Tag="kuopio,fi" Click="Button_Click">
+                    <Button.Background>
+                        <SolidColorBrush Color="LightBlue"/>
+                    </Button.Background>
+                </Button>
+                <Button x:Name="PoriButton" Content="Pori" Width="300" Tag="pori,fi" Click="Button_Click">
+                    <Button.Background>
+                        <SolidColorBrush Color="LightBlue"/>
+                    </Button.Background>
+                </Button>
+                <Button x:Name="JoensuuButton" Content="Joensuu" Width="300" Tag="joensuu,fi" Click="Button_Click">
+                    <Button.Background>
+                        <SolidColorBrush Color="LightBlue"/>
+                    </Button.Background>
+                </Button>
             </StackPanel>
         </ScrollViewer>
     </Grid>
