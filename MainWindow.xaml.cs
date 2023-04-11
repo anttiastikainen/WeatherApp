@@ -51,12 +51,15 @@ namespace WeatherApp
 
             // Update Textblocks
             SelectedCityTextBlock.Text=weather.Name;
-            string temp = ($"Temperature: {weather.Main.Temp}°C");
+            string temp = ($"Lämpötila: {weather.Main.Temp}°C");
             TemperatureTextBlock.Text = temp;
-            string feels = ($"Feels like: {weather.Main.FeelsLike}°C");
+            string feels = ($"Tuntuu kuin: {weather.Main.FeelsLike}°C");
             FeelsLikeTextBlock.Text = feels;
-            string humid = ($"Humidity: {weather.Main.Humidity}%");
+            string humid = ($"Ilman kosteus: {weather.Main.Humidity}%");
             HumidityTextBlock.Text = humid;
+
+            // set tooltip text
+            TemperatureToolTip.Text = $"Alin: {weather.Main.TempMin}°C, Ylin: {weather.Main.TempMax}°C";
 
         }
 
@@ -70,6 +73,7 @@ namespace WeatherApp
             var button = (Button)sender;
             var location = (string)button.Tag;
             UpdateView(location);
+
             button.Background = new SolidColorBrush(Color.FromRgb(0, 191, 255)); // set the background color to red
             _selectedButton = button;
         }

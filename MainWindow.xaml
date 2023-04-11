@@ -11,7 +11,15 @@
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
         <TextBlock x:Name="SelectedCityTextBlock" Grid.Row="0" Text="Selected City Name" HorizontalAlignment="Center" FontFamily="Microsoft Sans Serif" FontSize="24"/>
-        <TextBlock x:Name="TemperatureTextBlock" Grid.Row="1" Text="Temperature" HorizontalAlignment="Center"/>
+        
+        <TextBlock x:Name="TemperatureTextBlock" Grid.Row="1" Text="Temperature" HorizontalAlignment="Center">
+            <TextBlock.ToolTip>
+                <ToolTip Placement="Right" HorizontalOffset="10">
+                    <TextBlock x:Name="TemperatureToolTip" Text="Min: {weather.Main.TempMin}°C, Max: {weather.Main.TempMax}°C" />
+                </ToolTip>
+        </TextBlock.ToolTip>
+        </TextBlock>
+        
         <TextBlock x:Name="FeelsLikeTextBlock" Grid.Row="2" Text="Feels Like" HorizontalAlignment="Center"/>
         <TextBlock x:Name="HumidityTextBlock" Grid.Row="3" Text="Humidity" HorizontalAlignment="Center"/>
         <ScrollViewer Grid.Row="4" VerticalScrollBarVisibility="Auto">
